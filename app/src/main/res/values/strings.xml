@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">MyCityApp</string>
+    <string name="app_name">Londopedia</string>
+    <string name="explore_button">Let\'s Explore</string>
+
+    <string name="category_transportation">Transportation</string>
+
+    <string name="category_transportation_description">London has a well-connected transport system,
+        including the Underground (Tube), buses, and trains.
+        The Oyster card makes travel easy across the city.
+    </string>
+
+    <string name="right_arrow">Right Arrow</string>
 </resources>

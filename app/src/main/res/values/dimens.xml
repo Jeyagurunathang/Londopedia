@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_size">500dp</dimen>
+
+    <dimen name="padding_small">12dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+
+    <dimen name="height_small">8dp</dimen>
+    <dimen name="height_medium">12dp</dimen>
+    <dimen name="height_large">16dp</dimen>
+
+    <dimen name="width_small">8dp</dimen>
+    <dimen name="width_medium">12dp</dimen>
+    <dimen name="width_large">16dp</dimen>
+
+    <dimen name="category_image_size">150dp</dimen>
+</resources>
