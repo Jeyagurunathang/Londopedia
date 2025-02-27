@@ -14,5 +14,5 @@
     <dimen name="width_medium">12dp</dimen>
     <dimen name="width_large">16dp</dimen>
 
-    <dimen name="category_image_size">150dp</dimen>
+    <dimen name="category_image_size">70dp</dimen>
 </resources>

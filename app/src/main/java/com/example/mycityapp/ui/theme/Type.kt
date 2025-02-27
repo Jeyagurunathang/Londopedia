@@ -47,11 +47,17 @@ val Typography = Typography(
     labelLarge = TextStyle(
         fontFamily = inter,
         fontWeight = FontWeight.Bold,
-        fontSize = 18.sp,
+        fontSize = 22.sp,
         letterSpacing = 4.sp,
         brush = Brush.linearGradient(
             colors = listOf(Color(0xFFFF0000), Color(0xFF0000FF))
         )
+    ),
+    labelMedium = TextStyle(
+        fontFamily = inter,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.SemiBold,
+        letterSpacing = 2.sp
     )
     /* Other default text styles to override
     titleLarge = TextStyle(

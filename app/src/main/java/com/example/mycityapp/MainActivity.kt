@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.mycityapp.ui.Category
 import com.example.mycityapp.ui.LondopediaApp
 import com.example.mycityapp.ui.theme.MyCityAppTheme
 
@@ -23,6 +24,7 @@ class MainActivity : ComponentActivity() {
             MyCityAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     LondopediaApp(modifier = Modifier.padding(innerPadding))
+//                    Category(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
