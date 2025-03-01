@@ -7,11 +7,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.mycityapp.data.Category
+import com.example.mycityapp.data.local.LocalCategoryDataProvider
 import com.example.mycityapp.ui.Category
 import com.example.mycityapp.ui.LondopediaApp
 import com.example.mycityapp.ui.theme.MyCityAppTheme
@@ -23,8 +23,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyCityAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    LondopediaApp(modifier = Modifier.padding(innerPadding))
-//                    Category(modifier = Modifier.padding(innerPadding))
+//                    LondopediaApp(modifier = Modifier.padding(innerPadding))
+                    Category(
+                        categories = LocalCategoryDataProvider.rootCategoriesSubItems,
+                        modifier = Modifier.padding(innerPadding)
+                    )
                 }
             }
         }

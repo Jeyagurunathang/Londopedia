@@ -2,11 +2,136 @@
     <string name="app_name">Londopedia</string>
     <string name="explore_button">Let\'s Explore</string>
 
+    <!-- Main categories -->
     <string name="category_transportation">Transportation</string>
+    <string name="category_bridge">Bridge</string>
+    <string name="category_attraction">Attraction</string>
+    <string name="category_park">Park</string>
 
+    <!-- sub category lists of Transportation -->
+    <string name="transportation_underground">Underground</string>
+    <string name="transportation_bus">Bus</string>
+    <string name="transportation_taxi">Taxi</string>
+    <string name="transportation_dlr">Docklands Light Railway</string>
+    <string name="transportation_cycle">Cycling</string>
+    <string name="transportation_airways">Airways</string>
+
+    <!-- sub category lists of Bridge -->
+    <string name="bridge_tower_bridge">Tower Bridge</string>
+    <string name="bridge_westminster_bridge">Westminster Bridge</string>
+    <string name="bridge_london_eye">London Eye</string>
+    <string name="bridge_shard">The Shard</string>
+
+    <!-- sub category lists of Park -->
+    <string name="park_hyde">Hyde Park</string>
+    <string name="park_regents">Regent\'s Park</string>
+    <string name="park_richmond">Richmond Park</string>
+    <string name="park_greenwich">Greenwich Park</string>
+
+    <!-- sub category lists of Attraction -->
+    <string name="attraction_tower_of_london">Tower of London</string>
+    <string name="attraction_buckingham_palace">Buckingham Palace</string>
+    <string name="attraction_westminster_abbey">Westminster Abbey</string>
+    <string name="attraction_paul_cathedral">St.Paul\'s Cathedral</string>
+    <string name="attraction_big_ben">Big Ben</string>
+    <string name="attraction_windsor_castle">Windsor Castle</string>
+
+    <!-- Attractions establishment days -->
+    <string name="london_tower_established">%S 1066</string>
+    <string name="buckingham_palace_established">%S 1703</string>
+    <string name="westminster_abbey_established">%S 960 AD</string>
+    <string name="st_pauls_cathedral_established">%S 1675 \- 1710</string>
+    <string name="big_ben_established">%S 1840</string>
+    <string name="windsor_castle_established">%S 1070</string>
+
+    <!-- Parks establishment days -->
+    <string name="hyde_park_established">%S 1637</string>
+    <string name="regents_park_established">%S 1811</string>
+    <string name="richmond_park_established">%S 1625</string>
+    <string name="greenwich_park_established">%S 1433</string>
+
+    <!-- Main categories descriptions -->
     <string name="category_transportation_description">London has a well-connected transport system,
         including the Underground (Tube), buses, and trains.
         The Oyster card makes travel easy across the city.
+    </string>
+    <string name="category_bridge_description">London\'s bridges, like Tower Bridge and London Bridge,
+        connect the city across the River Thames.
+        They are iconic landmarks blending history and modern engineering.
+    </string>
+    <string name="category_attraction_description">London is rich in history, featuring landmarks like the Tower of London,
+        Buckingham Palace, and Big Ben. These sites showcase the city\'s royal heritage and architectural beauty.
+    </string>
+    <string name="category_park_description">London has many beautiful parks, including Hyde Park, Regent\'s Park,
+        and Greenwich Park. They offer green spaces for relaxation, walking, and outdoor activities.
+    </string>
+
+    <!-- Transportation's sub category list description -->
+    <string name="transportation_underground_description">The London Underground is the world’s first metro system, operating since 1863.
+        With 11 lines and 270 stations, it’s the quickest way to navigate the city.
+    </string>
+    <string name="transportation_taxi_description">London’s Black Cabs are world-famous and driven by professionals who pass
+        "The Knowledge" test,ensuring they know every street in London.
+    </string>
+    <string name="transportation_dlr_description">The DLR is an automated light railway that serves East London, connecting
+        areas like Greenwich, Canary Wharf, and London City Airport.
+    </string>
+    <string name="transportation_cycling_description">London has dedicated cycling lanes and the Santander Cycles (Boris Bikes) system,
+        where you can rent a bike from docking stations around the city.
+    </string>
+    <string name="transportation_airways_description">London is served by major airports like Heathrow, Gatwick, and Stansted.
+        They connect the city to destinations worldwide with numerous flights daily.
+    </string>
+
+    <!-- Bridge's sub category list description -->
+    <string name="bridge_tower_bridge_description">One of London’s most famous landmarks, Tower Bridge is a symbol of the city. Built in 1894,
+        this bascule and suspension bridge features two towers connected by a glass walkway, offering stunning views of the Thames.
+    </string>
+    <string name="bridge_westminster_bridge_description">One of the most scenic bridges in London, Westminster Bridge offers stunning views of Big Ben,
+        the Houses of Parliament, and the London Eye. It’s a must-visit for first-time travelers.
+    </string>
+    <string name="bridge_london_eye_description">The South Bank is home to The London Eye, offering one of the best panoramic views of the city.
+        This riverside area is packed with street performers, restaurants, and cultural attractions.
+    </string>
+    <string name="bridge_shard_description">For the ultimate cityscape view, visit The View from The Shard. At 310 meters high, it’s the tallest
+        building in Western Europe.
+    </string>
+
+    <!-- Park's sub category list description -->
+    <string name="park_hyde_description">One of London’s largest and most famous parks, Hyde Park spans 350 acres and is a hub for both relaxation and activities.
+        Originally a hunting ground for King Henry VIII, it is now a public park filled with beautiful gardens,
+        lakes, and walking paths. It is also a center for political debates at Speaker’s Corner and home to concerts,
+        events, and festivals throughout the year.
+    </string>
+    <string name="park_regent_description">Designed by John Nash, Regent’s Park is one of the most beautifully landscaped parks in London. It covers 395 acres and is
+        home to lush gardens, scenic walkways, and diverse wildlife. It’s also the site of London Zoo,
+        the world’s oldest scientific zoo.
+    </string>
+    <string name="park_richmond_description">Originally created as a royal hunting ground for King Charles I, Richmond Park is now London’s largest royal park, covering 2,500 acres.
+        It is a designated National Nature Reserve, known for its free-roaming herds of deer and breathtaking landscapes.
+    </string>
+    <string name="park_greenwich_description">A UNESCO World Heritage Site, Greenwich Park is one of London’s oldest and most historic parks.
+        It was once a hunting ground for Henry VIII and now offers stunning city views, beautiful gardens, and historical landmarks.
+    </string>
+
+    <!-- Attraction's sub category list description -->
+    <string name="attraction_tower_of_london_description">The Tower of London is one of the most famous castles in the world, with over 1,000 years of history. Originally built as a fortress
+        by William the Conqueror, it later served as a royal palace, prison, armory, treasury, and even a zoo!
+    </string>
+    <string name="attraction_buckingham_palace_description">Buckingham Palace is the administrative headquarters of the monarchy and a symbol of Britain’s royal heritage. It has 775 rooms,
+        including 52 royal bedrooms, 92 offices, and a 40-acre garden—the largest private garden in London!
+    </string>
+    <string name="attraction_westminster_abbey_description">A UNESCO World Heritage Site, Westminster Abbey has been the coronation church for British monarchs since 1066. It has hosted 16
+        royal weddings and is the final resting place of over 3,300 people, including kings, queens, poets, and scientists.
+    </string>
+    <string name="attraction_paul_cathedral_description">One of the most iconic buildings in London, St. Paul’s Cathedral was designed by Sir Christopher Wren after
+        the Great Fire of London in 1666. The cathedral is famous for its huge dome, which was inspired by St. Peter’s Basilica in Rome.
+    </string>
+    <string name="attraction_big_ben_description">The Palace of Westminster is home to the UK Parliament and features one of the most recognizable clock towers
+        in the world, Big Ben (officially called the Elizabeth Tower).
+    </string>
+    <string name="attraction_windsor_castle_description">Windsor Castle has been a royal residence for over 900 years and remains an official home of the British
+        monarchy. It is a working palace, often used for royal ceremonies.
     </string>
 
     <string name="right_arrow">Right Arrow</string>
