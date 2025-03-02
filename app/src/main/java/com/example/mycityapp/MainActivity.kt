@@ -10,10 +10,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.mycityapp.data.Category
 import com.example.mycityapp.data.local.LocalCategoryDataProvider
-import com.example.mycityapp.ui.Category
+import com.example.mycityapp.data.subCategoriesKeyFeatures
 import com.example.mycityapp.ui.LondopediaApp
+import com.example.mycityapp.ui.LondopediaAppCategoryDetailScreen
 import com.example.mycityapp.ui.theme.MyCityAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,10 +24,17 @@ class MainActivity : ComponentActivity() {
             MyCityAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 //                    LondopediaApp(modifier = Modifier.padding(innerPadding))
-                    Category(
-                        categories = LocalCategoryDataProvider.rootCategoriesSubItems,
-                        modifier = Modifier.padding(innerPadding)
-                    )
+//                    Category(
+//                        categories = LocalCategoryDataProvider.rootCategoriesSubItems,
+//                        modifier = Modifier.padding(innerPadding)
+//                    )
+                    LocalCategoryDataProvider.subCategories[R.string.category_transportation]?.let {
+                        LondopediaAppCategoryDetailScreen(
+                            it.first(),
+                            keyFeatures = subCategoriesKeyFeatures.keyFeature[R.string.transportation_underground] ?: listOf(R.string.transportation_underground),
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    }
                 }
             }
         }

@@ -134,5 +134,97 @@
         monarchy. It is a working palace, often used for royal ceremonies.
     </string>
 
+    <!-- Key Feature of transportation -->
+    <!-- Underground -->
+    <string name="underground_point_1">%S Oyster Card &amp; Contactless Payment accepted</string>
+    <string name="underground_point_2">%S Zones 1–6 (Central London = Zone 1)</string>
+    <string name="underground_point_3">%S Night Tube (operates on weekends on select lines)</string>
+    <!-- Bus -->
+    <string name="bus_point_1">Flat fare of £1.75 per journey (unlimited transfers within an hour)</string>
+    <string name="bus_point_2">Contactless &amp; Oyster Card payments only (no cash)</string>
+    <string name="bus_point_3">Best routes for sightseeing:</string>
+    <string name="bus_point_4">Route 11 (Big Ben, St Paul’s, Tower of London)</string>
+    <string name="bus_point_5">Route 24 (Westminster, Camden, Hampstead Heath)</string>
+    <!-- Taxi -->
+    <string name="taxi_point_1">Can be hailed on the street or booked via apps</string>
+    <string name="taxi_point_2">Fares based on distance &amp; time</string>
+    <string name="taxi_point_3">Uber &amp; Bolt also operate in London</string>
+    <!-- DLR -->
+    <string name="dlr_point_1">Fully automated, no driver</string>
+    <string name="dlr_point_2">Connects to the Tube network</string>
+    <string name="dlr_point_3">Great views of London Docklands</string>
+    <!-- Cycling -->
+    <string name="cycling_point_1">Rent a bike for just £2 for 24 hours</string>
+    <string name="cycling_point_2">First 30 minutes free per ride</string>
+    <string name="cycling_point_3">Docking stations available across the city</string>
+    <!-- Airways -->
+    <string name="airways_point_1">Heathrow Express (fastest way to Central London)</string>
+    <string name="airways_point_2">Gatwick Express &amp; Thameslink (fastest for Gatwick)</string>
+    <string name="airways_point_3">Stansted Express (best for Stansted Airport)</string>
+
+    <!-- Key Feature of Bridge -->
+    <!-- Tower Bridge -->
+    <string name="tower_bridge_point_1">Glass Floor Walkway (42 meters above the river)</string>
+    <string name="tower_bridge_point_2">Engine Rooms (historic steam engines that once powered the bridge)</string>
+    <string name="tower_bridge_point_3">Scenic views of the Tower of London &amp; The Shard</string>
+    <!-- Westminster Bridge -->
+    <string name="westminster_bridge_point_1">Best selfie spot with Big Ben</string>
+    <string name="westminster_bridge_point_2">Short walk to Westminster Abbey &amp; St James’s Park</string>
+    <string name="westminster_bridge_point_3">Great place for sunset views</string>
+    <!-- London Eye -->
+    <string name="london_eye_point_1">The London Eye (Europe’s tallest observation wheel)</string>
+    <string name="london_eye_point_2">The Southbank Centre (art &amp; music venue)</string>
+    <string name="london_eye_point_3">Amazing night views along the Thames</string>
+    <!-- The Shard -->
+    <string name="shard_point_1">Unbeatable skyline views</string>
+    <string name="shard_point_2">Cocktail bar on the 72nd floor</string>
+    <string name="shard_point_3">Glass balconies with open-air experience</string>
+
+    <!-- Key Feature of Park -->
+    <!-- Hyde Park -->
+    <string name="hyde_point_1">The Serpentine Lake, great for boating and swimming</string>
+    <string name="hyde_point_2">Diana Memorial Fountain, dedicated to Princess Diana</string>
+    <string name="hyde_point_3">Winter Wonderland, a magical Christmas festival in December</string>
+    <!-- Regent's Park -->
+    <string name="regent_point_1">Queen Mary’s Rose Garden, with over 12,000 roses 🌹</string>
+    <string name="regent_point_2">Regent’s Canal, where you can take a boat ride to Camden Market</string>
+    <string name="regent_point_3">Open Air Theatre, hosting live performances in the summer</string>
+    <!-- Richmond Park -->
+    <string name="richmond_point_1">The Deer Park, home to over 600 red and fallow deer</string>
+    <string name="richmond_point_2">Isabella Plantation, a stunning woodland garden 🌺</string>
+    <string name="richmond_point_3">King Henry’s Mound, with a distant view of St. Paul’s Cathedral</string>
+    <!-- Greenwich Park -->
+    <string name="greenwich_point_1">The Royal Observatory, where Greenwich Mean Time (GMT) is set</string>
+    <string name="greenwich_point_2">The Prime Meridian Line, where you can stand in two hemispheres at once</string>
+    <string name="greenwich_point_3">Greenwich Hill, offering the best panoramic view of the London skyline</string>
+
+    <!-- Key Feature of Attraction -->
+    <!-- Tower of London -->
+    <string name="london_tower_point_1">The Crown Jewels, including the Imperial State Crown 💎</string>
+    <string name="london_tower_point_2">The Bloody Tower, where the two Princes mysteriously disappeared</string>
+    <string name="london_tower_point_3">The Ravens of the Tower, believed to protect the monarchy</string>
+    <!-- Buckingham Palace -->
+    <string name="buckingham_point_1">Changing of the Guard Ceremony (daily in summer, alternate days in winter)</string>
+    <string name="buckingham_point_2">The Throne Room, used for royal ceremonies</string>
+    <string name="buckingham_point_3">The Queen’s Gallery, displaying royal art collections</string>
+    <!-- Westminster Abbey -->
+    <string name="westminster_abbey_point_1">Poet’s Corner, burial site of Shakespeare, Chaucer, and Dickens</string>
+    <string name="westminster_abbey_point_2">The Coronation Chair, used in every coronation since 1308</string>
+    <string name="westminster_abbey_point_3">Tomb of the Unknown Warrior, dedicated to soldiers of World War I</string>
+    <!-- St Paul's Cathedral -->
+    <string name="paul_cathedral_point_1">The Whispering Gallery, where sound travels along the curved walls</string>
+    <string name="paul_cathedral_point_2">The Golden Gallery, with stunning panoramic views of London</string>
+    <string name="paul_cathedral_point_3">Crypt, containing tombs of Lord Nelson and Sir Christopher Wren</string>
+    <!-- Big Ben -->
+    <string name="big_ben_point_1">House of Commons &amp; House of Lords, where British laws are debated</string>
+    <string name="big_ben_point_2">Clock Tower, standing 96 meters (316 feet) tall</string>
+    <string name="big_ben_point_3">Nighttime Illuminations, making the gothic architecture stand out</string>
+    <!-- Windsor Castle -->
+    <string name="windsor_castle_point_1">St. George’s Chapel, where Prince Harry &amp; Meghan Markle got married</string>
+    <string name="windsor_castle_point_2">The Long Walk, a stunning 3-mile avenue leading to the castle</string>
+    <string name="windsor_castle_point_3">The State Apartments, with lavish royal decor</string>
+
     <string name="right_arrow">Right Arrow</string>
+    <string name="back_arrow">Back Arrow</string>
+    <string name="additional_information">Additional Information</string>
 </resources>
