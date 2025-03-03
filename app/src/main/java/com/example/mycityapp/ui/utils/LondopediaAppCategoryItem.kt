@@ -27,6 +27,7 @@ import com.example.mycityapp.data.Category
 @Composable
 fun LondopediaAppCategoryItem(
     category: Category,
+//    onArrowClicked: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row (

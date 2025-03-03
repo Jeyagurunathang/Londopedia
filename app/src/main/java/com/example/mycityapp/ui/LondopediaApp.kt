@@ -30,7 +30,10 @@ import com.example.mycityapp.R
 import com.example.mycityapp.ui.theme.MyCityAppTheme
 
 @Composable
-fun LondopediaApp(modifier: Modifier = Modifier) {
+fun LondopediaApp(
+    onExploreClicked: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     Column (
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.SpaceAround,
@@ -49,15 +52,14 @@ fun LondopediaApp(modifier: Modifier = Modifier) {
             Text(
                 text = stringResource(R.string.app_name),
                 style = MaterialTheme.typography.displayLarge,
-                textAlign = TextAlign.Center,
-
+                textAlign = TextAlign.Center
             )
 
             Button(
-                onClick = {},
+                onClick = onExploreClicked,
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.secondary),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer
+                    containerColor = MaterialTheme.colorScheme.primary
                 ),
                 contentPadding = PaddingValues(vertical = dimensionResource(R.dimen.padding_large)),
                 modifier = modifier.fillMaxWidth(0.7F)
@@ -75,6 +77,8 @@ fun LondopediaApp(modifier: Modifier = Modifier) {
 @Composable
 fun LondopediaAppPreview() {
     MyCityAppTheme {
-        LondopediaApp()
+        LondopediaApp(
+            onExploreClicked = {}
+        )
     }
 }
