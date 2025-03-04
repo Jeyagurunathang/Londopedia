@@ -8,8 +8,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -20,6 +22,7 @@ import com.example.mycityapp.ui.LondopediaApp
 import com.example.mycityapp.ui.LondopediaAppCategories
 import com.example.mycityapp.ui.LondopediaAppCategoryDetailScreen
 import com.example.mycityapp.ui.LondopediaScreens
+import com.example.mycityapp.ui.LondopediaViewModel
 import com.example.mycityapp.ui.theme.MyCityAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,6 +31,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             val navController = rememberNavController()
+            val londopediaViewModel: LondopediaViewModel = viewModel()
+            val londopediaUiState = londopediaViewModel.londopediaUiState.collectAsState()
+
             MyCityAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     NavHost(
@@ -37,6 +43,7 @@ class MainActivity : ComponentActivity() {
                         composable(route = LondopediaScreens.Home.name) {
                             LondopediaApp(
                                 onExploreClicked = {
+                                    londopediaViewModel.updateCategories()
                                     navController.navigate(LondopediaScreens.MainCategory.name)
                                 },
                                 modifier = Modifier.padding(innerPadding)
@@ -45,34 +52,37 @@ class MainActivity : ComponentActivity() {
 
                         composable(route = LondopediaScreens.MainCategory.name) {
                             LondopediaAppCategories(
-                                categories = LocalCategoryDataProvider.rootCategories,
+                                categories = londopediaUiState.value.categories,
                                 modifier = Modifier.padding(innerPadding),
-                                onArrowClicked = {
+                                onArrowClicked = { it ->
+                                    londopediaViewModel.updateSubCategories(it)
                                     navController.navigate(LondopediaScreens.SubCategory.name)
                                 }
                             )
                         }
 
-//                        composable(route = LondopediaScreens.SubCategory.name) {
-//                            LondopediaAppCategories(
-//                                categories = LocalCategoryDataProvider.rootCategories,
-//                                modifier = Modifier.padding(innerPadding),
-//                                onArrowClicked = {
-//                                    navController.navigate(LondopediaScreens.SubCategoryDetails.name)
-//                                }
-//                            )
-//                        }
+                        composable(route = LondopediaScreens.SubCategory.name) {
+                            londopediaUiState.value.subCategories?.let {
+                                LondopediaAppCategories(
+                                    categories = it,
+                                    modifier = Modifier.padding(innerPadding),
+                                    onArrowClicked = { it ->
+                                        londopediaViewModel.updateKeyFeatures(it)
+                                        navController.navigate(LondopediaScreens.SubCategoryDetails.name)
+                                    }
+                                )
+                            }
+                        }
 
-//                        composable(route = LondopediaScreens.SubCategoryDetails.name) {
-//                            LocalCategoryDataProvider.subCategories[R.string.category_transportation]?.let { it1 ->
-//                                subCategoriesKeyFeatures.keyFeature[R.string.transportation_underground]?.let { it2 ->
-//                                    LondopediaAppCategoryDetailScreen(
-//                                        category = it1.first(),
-//                                        keyFeatures = it2
-//                                    )
-//                                }
-//                            }
-//                        }
+                        composable(route = LondopediaScreens.SubCategoryDetails.name) {
+                            londopediaUiState.value.keyFeature?.let {
+                                LondopediaAppCategoryDetailScreen(
+                                    category = londopediaUiState.value.currentSelectedCategory,
+                                    keyFeatures = it,
+                                    modifier = Modifier.padding(innerPadding)
+                                )
+                            }
+                        }
                     }
                 }
             }

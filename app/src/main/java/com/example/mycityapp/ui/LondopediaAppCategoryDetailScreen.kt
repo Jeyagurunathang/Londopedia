@@ -6,10 +6,13 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -42,12 +45,30 @@ fun LondopediaAppCategoryDetailScreen(
     modifier: Modifier = Modifier
 ) {
     Column (
-        modifier = modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize()
     ) {
-        Image(
-            painter = painterResource(category.categoryImage),
-            contentDescription = stringResource(category.categoryName),
-        )
+        Box {
+            Image(
+                painter = painterResource(category.categoryImage),
+                contentDescription = stringResource(category.categoryName),
+            )
+
+            Box(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = dimensionResource(R.dimen.padding_medium))
+            ) {
+                IconButton(
+                    onClick = {},
+                    modifier = modifier.background(color = Color.White, shape = MaterialTheme.shapes.extraLarge).padding(
+                        dimensionResource(R.dimen.padding_small)
+                    ).size(20.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.ArrowBack,
+                        contentDescription = stringResource(R.string.back_arrow)
+                    )
+                }
+            }
+        }
 
         Text(
             text = stringResource(category.categoryName),
