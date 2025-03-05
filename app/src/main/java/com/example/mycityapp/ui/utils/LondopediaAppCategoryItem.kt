@@ -1,5 +1,6 @@
 package com.example.mycityapp.ui.utils
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -28,6 +29,7 @@ import com.example.mycityapp.data.Category
 fun LondopediaAppCategoryItem(
     category: Category,
     onArrowClicked: (Category) -> Unit,
+    onSystemBackTriggered: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row (
@@ -35,6 +37,9 @@ fun LondopediaAppCategoryItem(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
+        BackHandler(
+            onBack = onSystemBackTriggered
+        )
         /*
         * Can't show the preview image of each category. Coz, the images are in high quality
         * So, the application takes some times to respond to the user's interactions

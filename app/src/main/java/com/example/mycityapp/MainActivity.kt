@@ -2,6 +2,7 @@ package com.example.mycityapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
@@ -54,10 +55,15 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     topBar = { TopAppBar(
                         currentScreen = currentScreen,
-                        currentScreenTitle = londopediaUiState.value.currentScreenTitle
+                        currentScreenTitle = londopediaUiState.value.currentScreenTitle,
+                        navigateUp = {
+                            londopediaViewModel.updateTopAppBarTitle()
+                            navController.navigateUp()
+                        }
                     ) },
                     modifier = Modifier.fillMaxSize()
                 ) { innerPadding ->
+
                     NavHost(
                         navController = navController,
                         startDestination = LondopediaScreens.Home.name
@@ -79,7 +85,8 @@ class MainActivity : ComponentActivity() {
                                 onArrowClicked = { it ->
                                     londopediaViewModel.updateSubCategories(it)
                                     navController.navigate(LondopediaScreens.SubCategory.name)
-                                }
+                                },
+                                onSystemBackTriggered = { navController.navigateUp() }
                             )
                         }
 
@@ -91,6 +98,10 @@ class MainActivity : ComponentActivity() {
                                     onArrowClicked = { it ->
                                         londopediaViewModel.updateKeyFeatures(it)
                                         navController.navigate(LondopediaScreens.SubCategoryDetails.name)
+                                    },
+                                    onSystemBackTriggered = {
+                                        londopediaViewModel.updateTopAppBarTitle()
+                                        navController.navigateUp()
                                     }
                                 )
                             }
@@ -101,6 +112,9 @@ class MainActivity : ComponentActivity() {
                                 LondopediaAppCategoryDetailScreen(
                                     category = londopediaUiState.value.currentSelectedCategory,
                                     keyFeatures = it,
+                                    onBackClicked = {
+                                        navController.navigateUp()
+                                    },
                                     modifier = Modifier.padding(innerPadding)
                                 )
                             }
@@ -117,6 +131,7 @@ class MainActivity : ComponentActivity() {
 private fun TopAppBar(
     currentScreen: LondopediaScreens,
     currentScreenTitle: Int,
+    navigateUp: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     if (currentScreen == LondopediaScreens.MainCategory || currentScreen == LondopediaScreens.SubCategory) {
@@ -129,7 +144,7 @@ private fun TopAppBar(
             },
             navigationIcon = {
                 IconButton(
-                    onClick = {}
+                    onClick = navigateUp
                 ) {
                     Icon(
                         imageVector = Icons.Default.KeyboardArrowLeft,

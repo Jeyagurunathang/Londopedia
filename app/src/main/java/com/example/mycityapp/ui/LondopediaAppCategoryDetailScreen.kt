@@ -1,5 +1,7 @@
 package com.example.mycityapp.ui
 
+import android.util.Log
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -42,11 +44,16 @@ import com.example.mycityapp.data.Category
 fun LondopediaAppCategoryDetailScreen(
     category: Category,
     keyFeatures: List<Int>,
+    onBackClicked: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column (
         modifier = Modifier.fillMaxSize()
     ) {
+        BackHandler(
+            onBack = onBackClicked
+        )
+
         Box {
             Image(
                 painter = painterResource(category.categoryImage),
@@ -57,7 +64,7 @@ fun LondopediaAppCategoryDetailScreen(
                 modifier = Modifier.fillMaxWidth().padding(horizontal = dimensionResource(R.dimen.padding_medium))
             ) {
                 IconButton(
-                    onClick = {},
+                    onClick = onBackClicked,
                     modifier = modifier.background(color = Color.White, shape = MaterialTheme.shapes.extraLarge).padding(
                         dimensionResource(R.dimen.padding_small)
                     ).size(20.dp)

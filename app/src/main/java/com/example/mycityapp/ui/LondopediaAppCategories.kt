@@ -18,6 +18,7 @@ import com.example.mycityapp.ui.utils.LondopediaAppCategoryItem
 fun LondopediaAppCategories(
     categories: List<Category>,
     onArrowClicked: (Category) -> Unit,
+    onSystemBackTriggered: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     LazyColumn (
@@ -30,7 +31,8 @@ fun LondopediaAppCategories(
         ) { category ->
             LondopediaAppCategoryItem(
                 category = category,
-                onArrowClicked = { onArrowClicked(category) }
+                onArrowClicked = { onArrowClicked(category) },
+                onSystemBackTriggered = onSystemBackTriggered
             )
         }
     }

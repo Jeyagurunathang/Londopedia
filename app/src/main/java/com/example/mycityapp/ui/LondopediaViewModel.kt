@@ -44,7 +44,7 @@ class LondopediaViewModel : ViewModel() {
         }
     }
 
-    private fun updateTopAppBarTitle(category: Category? = null) {
+    fun updateTopAppBarTitle(category: Category? = null) {
         _uiState.update {
             it.copy(
                 currentScreenTitle = category?.categoryName ?: R.string.home
