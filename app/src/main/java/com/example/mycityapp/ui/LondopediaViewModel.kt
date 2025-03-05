@@ -2,6 +2,7 @@ package com.example.mycityapp.ui
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import com.example.mycityapp.R
 import com.example.mycityapp.data.Category
 import com.example.mycityapp.data.local.LocalCategoryDataProvider
 import com.example.mycityapp.data.subCategoriesKeyFeatures
@@ -16,6 +17,7 @@ class LondopediaViewModel : ViewModel() {
     val londopediaUiState: StateFlow<LondopediaUiState> = _uiState.asStateFlow()
 
     fun updateCategories() {
+        updateTopAppBarTitle()
         _uiState.update {
             it.copy(
                 categories = LocalCategoryDataProvider.rootCategories
@@ -24,6 +26,7 @@ class LondopediaViewModel : ViewModel() {
     }
 
     fun updateSubCategories(category: Category) {
+        updateTopAppBarTitle(category)
         _uiState.update {
             it.copy(
                 currentSelectedCategory = category,
@@ -37,6 +40,14 @@ class LondopediaViewModel : ViewModel() {
             it.copy(
                 currentSelectedCategory = category,
                 keyFeature = subCategoriesKeyFeatures.keyFeature[category.categoryName]
+            )
+        }
+    }
+
+    private fun updateTopAppBarTitle(category: Category? = null) {
+        _uiState.update {
+            it.copy(
+                currentScreenTitle = category?.categoryName ?: R.string.home
             )
         }
     }
